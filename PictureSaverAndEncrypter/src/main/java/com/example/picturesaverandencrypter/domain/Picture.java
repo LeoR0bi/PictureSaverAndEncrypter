@@ -8,6 +8,7 @@ import nonapi.io.github.classgraph.json.Id;
 @Entity
 public class Picture {
 
+    @jakarta.persistence.Id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -32,4 +33,11 @@ public class Picture {
         this.data = data;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }

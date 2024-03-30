@@ -12,13 +12,13 @@ import java.io.IOException;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/pictures")
+@RequestMapping("/api")
 public class PictureController {
 
     @Autowired
     private PictureService pictureService;
 
-    @PostMapping("/upload")
+    @PostMapping("/files")
     public ResponseEntity<String> uploadImage(@RequestParam("file") MultipartFile file) {
         try {
             pictureService.uploadImage(file);
